@@ -126,5 +126,6 @@ for arrs in graphlets_c:
     plt.savefig(str(count)+".png")
     plt.close()
     count+=1
+    break
             
 
