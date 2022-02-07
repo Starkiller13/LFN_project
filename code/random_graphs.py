@@ -4,12 +4,12 @@ import matplotlib.pyplot as plt
 #read the csv file
 df = pd.read_csv("../data/soc-sign-bitcoinotc.csv")
 #print(df.head())
-file = open("../mc_sim.txt","a")
+file = open("../mc_sim2.txt","a")
 
 def subRoutine(r_g,it):
     temp = []
     for i in range(0,it):
-        random_rewire(r_g, model='erdos', n_iter=100*r_g.num_edges(), edge_sweep=False, parallel_edges=False, self_loops=False)
+        random_rewire(r_g, model='configuration',n_iter=100*r_g.num_edges(), edge_sweep=False, parallel_edges=False, self_loops=False)
         temp.append(motifs(r_g, k=3))
     pos = temp[0][0]
     res = [0]*len(pos)
