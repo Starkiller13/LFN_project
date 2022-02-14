@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import norm
 
-file = open("../results/mc_sim3.txt","r").readlines()
+file = open("montecarlo_sim.txt","r").readlines()
 data = []
 for i in file:
     arr = i[1:-2].split(", ")
